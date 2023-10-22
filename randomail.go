@@ -7,7 +7,7 @@ import (
 
 var domains = []string{"example.com", "test.com", "yourdomain.com"}
 
-// GenerateRandomEmails menghasilkan alamat email acak sejumlah n.
+// `GenerateRandomEmails` generates random email addresses equal to n number of arguments.
 func GenerateRandomEmails(n int) []string {
 	emails := make([]string, n)
 	for i := 0; i < n; i++ {
@@ -16,7 +16,7 @@ func GenerateRandomEmails(n int) []string {
 	return emails
 }
 
-// GenerateRandomEmail menghasilkan alamat email acak.
+// `GenerateRandomEmail` generates a random email address.
 func GenerateRandomEmail() string {
 	username := generateRandomString(8)
 	domain := domains[rand.Intn(len(domains))]
