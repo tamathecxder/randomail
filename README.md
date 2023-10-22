@@ -8,7 +8,7 @@ This is a simple Go module that allows you to generate random email addresses. I
 
 1. Install the module by running:
    ```shell
-   go get github.com/yourusername/emailgenerator
+   go get github.com/tamathecxder/randomail
    ```
 2. Import the module in your Go code:
     ```go
@@ -31,9 +31,9 @@ This is a simple Go module that allows you to generate random email addresses. I
 
 You can customize the list of email domains by modifying the domains variable in the emailgenerator/emailgenerator.go file.
 
-    ```go
-    var domains = []string{"example.com", "test.com", "yourdomain.com"}
-    ```
+```go
+var domains = []string{"example.com", "test.com", "yourdomain.com"}
+```
 
 ## License
 
