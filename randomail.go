@@ -25,14 +25,14 @@ func GenerateRandomEmailWithCustomDomain(customDomain string) (string, error) {
 func GenerateRandomEmails(n int) []string {
 	emails := make([]string, n)
 	for i := 0; i < n; i++ {
-		emails[i] = GenerateRandomEmail()
+		emails[i] = GenerateRandomEmail(8)
 	}
 	return emails
 }
 
 // `GenerateRandomEmail` generates a random email address.
-func GenerateRandomEmail() string {
-	username := generateRandomString(8)
+func GenerateRandomEmail(mailLength int) string {
+	username := generateRandomString(mailLength)
 	domain := domains[rand.Intn(len(domains))]
 	email := fmt.Sprintf("%s@%s", username, domain)
 	return email
