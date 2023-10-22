@@ -1,11 +1,25 @@
 package randomail
 
 import (
+	"errors"
 	"fmt"
 	"math/rand"
+	"strings"
 )
 
 var domains = []string{"example.com", "test.com", "yourdomain.com"}
+
+// GenerateRandomEmailWithCustomDomain generates a random email address with a customised domain.
+func GenerateRandomEmailWithCustomDomain(customDomain string) (string, error) {
+	if !strings.Contains(customDomain, ".") {
+		return "", errors.New("custom domain must contain a dot (.)")
+	}
+
+	username := generateRandomString(8)
+	email := fmt.Sprintf("%s@%s", username, customDomain)
+
+	return email, nil
+}
 
 // `GenerateRandomEmails` generates random email addresses equal to n number of arguments.
 func GenerateRandomEmails(n int) []string {
