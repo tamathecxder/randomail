@@ -14,17 +14,18 @@ This is a simple Go module that allows you to generate random email addresses. I
     ```go
     import (
         "fmt"
-        "github.com/yourusername/emailgenerator"
+        "github.com/tamathecxder/randomail"
     )
     ```
 3.  Generate random email addresses using the 
-<code>GenerateRandomEmail</code> function:
+<code>GenerateRandomEmails</code> function:
 
     ```go
-    for i := 1; i <= 5; i++ {
-        email := emailgenerator.GenerateRandomEmail()
-        fmt.Printf("Random Email #%d: %s\n", i, email)
-    }
+    emails := randomail.GenerateRandomEmails(10)
+
+	for i, email := range emails {
+		fmt.Printf("Random email #%d: %s\n", i+1, email)
+	}
     ```
 
 ## Customization
